@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Irvan & Siti</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital@0;1&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- KONTANER DEKORASI KUPU-KUPU & BUNGA JATUH -->
+    <div class="flower-container" id="flowerContainer"></div>
+    <div class="butterfly-container" id="butterflyContainer"></div>
+
+    <!-- COVER DEPAN (BERSIH TANPA BINGKAI) -->
+    <div id="cover-view">
+        <div class="overlay"></div>
+        <div class="cover-content">
+            <h4 class="fade-in">The Wedding</h4>
+            <p class="fade-in delay-1" style="color: #dfc897; margin-bottom: 12px;">Sabtu, 07 November 2026</p>
+            <h1 class="fade-in delay-1" style="font-size: 2.8rem; color: #dfc897;">Irvan & Siti</h1>
+            
+            <div class="guest-box fade-in delay-2">
+                <p style="font-size: 0.75rem; letter-spacing: 1px; color: #cbd5e1;">KAPADA YTH, BAPAK/IBU/SDRA/I :</p>
+                <h2 id="guest-name" style="font-size: 1.3rem; color: var(--gold); margin-top: 5px; font-weight: bold;">Tamu Undangan</h2>
+            </div>
+
+            <button class="btn fade-in delay-3" onclick="openInvitation()">BUKA UNDANGAN</button>
+        </div>
+    </div>
+
+    <!-- ISI UNDANGAN -->
+    <div id="invite-view" class="hidden-view">
+        
+        <audio id="bg-music" loop>
+            <source src="Sound.mp3" type="audio/mpeg">
+        </audio>
+        <div id="audio-control" onclick="toggleAudio()">🎵</div>
+
+        <!-- PEMBUKA & SALAM -->
+        <section class="sec-opening dark-bg">
+            <div class="box-container reveal-left">
+                  <!-- Mahkota Ampu & Bulang Berdampingan Seperti Berpasangan -->
+                <div class="couple-crowns-container">
+                    <img src="bahan/ampu.png" alt="Ampu" class="crown-item floating-element">
+                    <img src="bahan/bulang.png" alt="Bulang" class="crown-item floating-element" style="animation-delay: 0.5s;">
+                </div>
+                <p class="arabic slow-text" style="font-size: 1.2rem; margin-bottom: 8px;">Bismillahirrahmanirrahim</p>
+                <p class="italic slow-text" style="margin-bottom: 15px;">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+                <p class="slow-text" style="font-size: 0.9rem; line-height: 1.7;">Dengan memohon Rahmat & Ridho Allah SWT kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri resepsi pernikahan Putra/Putri kami :</p>
+            </div>
+        </section>
+
+        
+        <!-- OUR LOVE STORY -->
+        <section class="sec-story dark-bg">
+            <div class="box-container reveal-right">
+                  <!-- Mahkota Ampu & Bulang Berdampingan Seperti Berpasangan -->
+                <div class="couple-crowns-container">
+                    <img src="bahan/ampu.png" alt="Ampu" class="crown-item floating-element">
+                    <img src="bahan/bulang.png" alt="Bulang" class="crown-item floating-element" style="animation-delay: 0.5s;">
+                </div>
+                <h3 class="gold-text italic slow-text" style="font-size: 1.8rem; margin-bottom: 15px;">Kedua Mempelai</h3>
+                <div class="story-slider-container">
+                    <img src="bahan/profil.jpeg" class="story-slide active" alt="Story 1">
+                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=600&q=80" class="story-slide" alt="Story 2">
+                </div>
+            </div>
+        </section>
+
+        <!-- KEDUA MEMPELAI (DENGAN AMPU & BULANG BERDEKATAN DI ATAS BOX) -->
+        <section class="sec-mempelai dark-bg">
+            <div class="box-container reveal-zoom couple-box-wrapper" style="text-align: center; padding-top: 3rem;">
+                <!-- Mahkota Ampu & Bulang Berdampingan Seperti Berpasangan -->
+                <div class="couple-crowns-container">
+                    <img src="bahan/ampu.png" alt="Ampu" class="crown-item floating-element">
+                    <img src="bahan/bulang.png" alt="Bulang" class="crown-item floating-element" style="animation-delay: 0.5s;">
+                </div>
+
+                <div class="mempelai-gabung">
+                    <!-- Efek Ketik Huruf demi Huruf untuk Nama Pengantin -->
+                    <h3 class="gold-text type-writer-text" style="font-size: 1.6rem; margin-bottom: 5px;">Irvan Raja Ali Hasibuan, S.Kom</h3>
+                    <p class="slow-text" style="font-size: 0.8rem; color: #cbd5e1; margin-bottom: 3px;">Putra Pertama dari</p>
+                    <P class="slow-text" style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 15px;"> <P>Bpk. Alm. Arpan Endang Hasibuan, S.Pd </P> <P>& Ibu Dahlina Pardede, S.Pd</P>
+
+                    <h2 class="dan-text slow-text" style="color: #dfc897; font-size: 2rem; margin: 10px 0; font-family: 'Playfair Display', serif;">&</h2>
+
+                    <h3 class="gold-text type-writer-text" style="font-size: 1.6rem; margin-bottom: 5px; margin-top: 15px;">Siti Nurhidayah Nasution, S.P</h3>
+                    <p class="slow-text" style="font-size: 0.8rem; color: #cbd5e1; margin-bottom: 3px;">Putri Tunggal dari</p>
+                    <p class="slow-text" style="font-size: 0.75rem; color: #94a3b8;"><P>Bpk. Ahmad Syakirin Nasution</P> <P>& Ibu (Almh) Siti Hawa Sipahutar</P></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- COUNTDOWN (TARGET 9 NOVEMBER 2026) -->
+        <section class="sec-countdown dark-bg">
+            <div class="box-container reveal-zoom">
+                <h2 class="gold-text italic slow-text" style="font-size: 2rem; margin-bottom: 8px;">Save The Date</h2>
+                <p class="slow-text" style="font-size: 0.85rem; margin-bottom: 20px; line-height: 1.5;">Dan kami bersyukur, dipertemukan Allah diwaktu terbaik, kini kami menanti Hari Istimewa kami.</p>
+                <div id="countdown" style="display: flex; justify-content: center; gap: 8px;">
+                    <div class="cd-box"><span id="cd-hari">00</span><small>Hari</small></div>
+                    <div class="cd-box"><span id="cd-jam">00</span><small>Jam</small></div>
+                    <div class="cd-box"><span id="cd-menit">00</span><small>Menit</small></div>
+                    <div class="cd-box"><span id="cd-detik">00</span><small>Detik</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFORMASI ACARA & TOMBOL KALENDER -->
+        <section class="sec-acara dark-bg">
+            <div class="reveal-up" style="margin-bottom: 15px;">
+                <p class="slow-text" style="font-style: italic; font-size: 0.9rem;">Yang Insya Allah di laksanakan pada :</p>
+            </div>
+
+            <div class="arch-card-event reveal-up">
+                <h2 style="color: #0f172a; font-size: 1.8rem;">Akad Nikah</h2>
+                <p class="bold" style="color: #bda16b; margin-top: 4px;">Jum'at, 06 November 2026</p>
+                <hr>
+                <p>Pukul : 14.00 WIB</p>
+                <p class="lokasi"><b>Bertempat :</b><br>Jln. SD Inpres, Kelurahan Siabu</p>
+            </div>
+
+               <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;" class="reveal-up">
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Irvan+%26+Siti&dates=20261109T020000Z/20261109T090000Z&details=Resepsi+Pernikahan+Irvan+dan+Siti+di+Gg.+Raja+Bonan+Dolok,+Siabu" target="_blank" class="btn-outline" style="border-color: #dfc897; color: #dfc897; font-size: 0.75rem;">📅 Simpan ke Kalender</a>
+                <a href="https://maps.app.goo.gl/AQT6YiA33YQUgFRg9" target="_blank" class="btn-outline" style="border-color: #dfc897; color: #dfc897; font-size: 0.75rem;">📍 Google Maps</a>
+            </div>
+      
+
+            <div class="arch-card-event reveal-up" style="margin-top: 1.5rem;">
+                <h2 style="color: #0f172a; font-size: 1.8rem;">Resepsi</h2>
+                <p class="bold" style="color: #bda16b; margin-top: 4px;">Senin, 09 November 2026</p>
+                <hr>
+                <p>Pukul : 09.00 WIB s/d Selesai</p>
+                <p class="lokasi"><b>Bertempat :</b><br>Gg.Raja, Desa Bonan Dolok, Kec. Siabu</p>
+            </div>
+            
+            <!-- Tombol Tambah ke Kalender & Lihat Maps -->
+            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;" class="reveal-up">
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Irvan+%26+Siti&dates=20261109T020000Z/20261109T090000Z&details=Resepsi+Pernikahan+Irvan+dan+Siti+di+Gg.+Raja+Bonan+Dolok,+Siabu" target="_blank" class="btn-outline" style="border-color: #dfc897; color: #dfc897; font-size: 0.75rem;">📅 Simpan ke Kalender</a>
+                <a href="https://maps.app.goo.gl/VZJysTafVojV9qzYA" target="_blank" class="btn-outline" style="border-color: #dfc897; color: #dfc897; font-size: 0.75rem;">📍 Google Maps</a>
+            </div>
+        </section>
+
+        <!-- TURUT MENGUNDANG -->
+        <section class="sec-turut dark-bg">
+            <div class="box-container reveal-right" style="border: 1px solid rgba(223,200,151,0.3);">
+                <h3 class="slow-text" style="color: #dfc897; margin-bottom: 12px; font-size: 1.3rem;">Turut Mengundang</h3>
+                <div style="display: flex; justify-content: space-around; font-weight: 500; font-size: 0.9rem;">
+                    <div>• Mora</div>
+                    <div>• Kahanggi</div>
+                    <div>• Anak Boru</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERI FOTO -->
+        <section class="sec-gallery dark-bg">
+            <div class="reveal-up">
+                <h3 class="gold-text italic slow-text" style="font-size: 1.8rem; margin-bottom: 20px;">Galeri Foto</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal-left"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=400&q=80" alt="Foto 1"></div>
+                    <div class="gallery-item reveal-right"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=400&q=80" alt="Foto 2"></div>
+                    <div class="gallery-item reveal-left"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=400&q=80" alt="Foto 3"></div>
+                    <div class="gallery-item reveal-right"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=400&q=80" alt="Foto 4"></div>
+                    <div class="gallery-item reveal-left"><img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=400&q=80" alt="Foto 5"></div>
+                    <div class="gallery-item reveal-right"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=400&q=80" alt="Foto 6"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WEDDING GIFT -->
+        <section class="sec-gift dark-bg">
+            <div class="box-container reveal-left">
+                  <!-- Mahkota Ampu & Bulang Berdampingan Seperti Berpasangan -->
+                <div class="couple-crowns-container">
+                    <img src="bahan/ampu.png" alt="Ampu" class="crown-item floating-element">
+                    <img src="bahan/bulang.png" alt="Bulang" class="crown-item floating-element" style="animation-delay: 0.5s;">
+                </div>
+                <h3 class="gold-text slow-text" style="margin-bottom: 12px; font-size: 1.5rem;">Wedding Gift</h3>
+                <p class="slow-text" style="font-size: 0.8rem; margin-bottom: 20px; line-height: 1.5;">Bapak/Ibu/Saudara/i yang ingin mengirimkan hadiah pernikahan dapat melalui virtual account atau e-wallet di bawah ini:</p>
+                
+                <!-- BRI -->
+                <div class="gift-card">
+                    <h4 style="color: #0056b3;">BRI</h4>
+                    <p class="rek-number" id="rek-bri">1234567890</p>
+                    <p style="font-size: 0.75rem; color:#555;">a.n Irvan Raja Ali Hasibuan</p>
+                    <button class="btn-small" onclick="copyText('rek-bri')">Copy</button>
+                </div>
+
+                <!-- BNI -->
+                <div class="gift-card" style="margin-top: 12px;">
+                    <h4 style="color: #f15a24;">BNI</h4>
+                    <p class="rek-number" id="rek-bni">0987654321</p>
+                    <p style="font-size: 0.75rem; color:#555;">a.n Irvan Raja Ali Hasibuan</p>
+                    <button class="btn-small" onclick="copyText('rek-bni')">Copy</button>
+                </div>
+
+                <!-- Kirim Hadiah Fisik -->
+                <div class="gift-card" style="margin-top: 12px; text-align: left;">
+                    <h4 style="color: #333;">Kirim Hadiah</h4>
+                    <p style="font-size: 0.8rem; color:#333; margin-top: 4px;">
+                        <b>Nama Penerima :</b> Irvan Raja Ali Hasibuan<br>
+                        <b>No. HP :</b> 081234567890<br>
+                        <b>Alamat :</b> Gg. Raja, Desa Bonan Dolok, Kec. Siabu
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP & UCAPAN -->
+        <section class="sec-rsvp dark-bg">
+            <div class="box-container reveal-right" style="text-align: left;">
+                <h3 class="gold-text slow-text" style="text-align: center; margin-bottom: 8px; font-size: 1.5rem;">Ucapkan Sesuatu</h3>
+                <p class="slow-text" style="font-size: 0.8rem; text-align: center; margin-bottom: 15px;">Berikan ucapan harapan dan do'a kepada kedua mempelai</p>
+                
+                <form id="rsvp-form" onsubmit="submitRSVP(event)">
+                    <div style="margin-bottom: 10px;">
+                        <label style="font-size: 0.75rem; color: #dfc897;">Nama</label>
+                        <input type="text" id="rsvp-name" class="form-control" required>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label style="font-size: 0.75rem; color: #dfc897;">Konfirmasi Kehadiran</label>
+                        <select id="rsvp-status" class="form-control" required>
+                            <option value="Hadir">Hadir</option>
+                            <option value="Tidak Hadir">Tidak Hadir</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 12px;">
+                        <label style="font-size: 0.75rem; color: #dfc897;">Ucapan</label>
+                        <textarea id="rsvp-message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Kirim</button>
+                </form>
+
+                <div id="wishes-container" class="wishes-box"></div>
+            </div>
+        </section>
+
+        <!-- PENUTUP -->
+        <section class="sec-closing dark-bg" style="padding-bottom: 4rem;">
+            <div class="box-container reveal-zoom">
+                  <!-- Mahkota Ampu & Bulang Berdampingan Seperti Berpasangan -->
+                <div class="couple-crowns-container">
+                    <img src="bahan/ampu.png" alt="Ampu" class="crown-item floating-element">
+                    <img src="bahan/bulang.png" alt="Bulang" class="crown-item floating-element" style="animation-delay: 0.5s;">
+                </div>
+                <p class="slow-text" style="font-size: 0.8rem; margin-bottom: 15px; line-height: 1.7;">Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.</p>
+                
+                <p class="italic slow-text" style="margin-bottom: 4px; color: #dfc897;">kami yang berbahagia,</p>
+                <h2 class="gold-text type-writer-text" style="font-family: 'Playfair Display', serif; font-size: 1.8rem;">Irvan & Siti</h2>
+                
+                <div style="margin-top: 20px; font-size: 0.7rem; color: #888; line-height: 1.5;">
+                    <p>Pihak Laki-Laki : Bpk. Alm. Arpan Endang Hasibuan, S.Pd & Ibu Dahlina Pardede, S.Pd</p>
+                    <p style="margin-top: 3px;">Pihak Wanita : Bpk. Ahmad Syakirin Nasution & Ibu (Almh) Siti Hawa Sipahutar</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
